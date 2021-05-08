@@ -1,0 +1,245 @@
+body{
+    background-color: seashell;
+    color: black;
+}
+body.darkmode{
+    background-color: rgb(29, 29, 29);
+    color: ivory;
+}
+.days{
+    margin-left:10px;
+}
+.main{
+    display: grid;
+    grid-template: 40px 40px repeat(6, 1fr) 20px/ repeat(10, 1fr);
+    height: 100vh;
+}
+.board{
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    grid-area: 3/2/8/10;
+    background-color:rgb(52, 61, 61);
+    display: grid;
+    grid-template: 1fr 2fr 2fr 1fr/ repeat(12, 1fr);
+}
+.garden{
+    grid-area: 2/5/4/12;
+    border: 2px dashed black;
+    background-color:rgb(41, 24, 12);
+    border-radius: 6px;
+    display: grid;
+    grid-template: repeat(8, 1fr)/ repeat(8, 1fr);
+}
+.carts{
+    grid-area: 2/2/3/4;
+    display: grid;
+    grid-template: 2fr 4fr 1fr 4fr / 3fr 1fr 3fr;
+}
+.cartLabel{
+    grid-area: 2/2/2/4;
+    text-align: center;
+    
+}
+.cart{
+    display: grid;
+    border: 1px solid black;
+    background-color:saddlebrown;
+    grid-template: 1fr 1fr 1fr/ 1fr 2fr 1fr;
+    cursor: grab;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cart.one{
+    grid-area: 2/1/3/2;
+}
+.cart.two{
+    grid-area: 4/1/5/2;
+}
+.cart.three{
+    grid-area: 2/3/3/4;
+}
+.cart.four{
+    grid-area: 4/3/5/4;
+}
+.cart > label{
+    text-align: center;
+    color: black;
+    grid-area: 3/2/4/3;
+    cursor: grab;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.slotContainer{
+    grid-area: 2/2/3/3;
+    background-color: ivory;
+    text-align: center;
+    box-shadow: inset 1px 1px grey;
+    cursor: grab;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.plant{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px double black;
+    border-bottom: 3px double black;
+    font-weight: bolder;
+    color:black;
+    cursor: grab;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.plant > *{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.seedBoxTotal{
+    border: 2px solid black;
+    border-top: 0 solid black;
+    text-align: center;
+    grid-column-start: 7;
+    grid-row-start: 8;
+    grid-column-end: 9;
+    background-color: whitesmoke;
+}
+.seedBoxTotal.darkmode{
+    border: 2px solid lightgray;
+    border-top: 0 solid lightgray;
+    background-color: black;
+}
+.seedBox{
+    display:flex;
+    border-top: 1px solid black;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    cursor: grab;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.seedBox.darkmode{
+    border-top: 1px solid lightgray;
+}
+.seed{
+    grid-row: span 1;
+    grid-column: span 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color:black;
+    cursor: grab;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.0);
+}
+.seed > *{
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.inventoryTotal{
+    grid-column-start: 3;
+    grid-row-start: 8;
+    grid-column-end: 5;
+    text-align: center;
+    border: 2px solid black;
+    border-top: 0 solid black;
+    background-color: whitesmoke;
+}
+.inventoryTotal.darkmode{
+    border: 2px solid lightgray;
+    border-top: 0px solid lightgray;
+    background-color: black;
+}
+.inventory{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    border-top: 1px solid black;
+}
+.inventory.darkmode{
+    border-top: 1px solid lightgray;
+}
+.login.loggedout{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(3, 3, 3, 0.5);
+}
+.login.loggedin{
+    display: none;
+}
+.header{
+    background-color: darkgray;
+    border-bottom: 1px solid black;
+    grid-area: 1/1/2/11;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    width: 100%;
+}
+.header.darkmode{
+    border-bottom: 1px solid dimgray;
+    background-color: black;
+}
+.buttonGroup >.button{
+    margin: 0;
+    
+}
+.button{
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: ivory;
+    padding: 6px;
+}  
+.button.left{
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.button.right{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+} 
+.dToggle.darkmode{
+    background-color: rgb(160, 160, 148);
+}
+.controls{
+    grid-row: 8/9;
+}
+#headerGroup{
+    margin: 6px;
+}
+#loginGroup > .button{
+    padding: 3px;
+}
